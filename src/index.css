@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+/* Custom scrollbar for textareas and cards */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#E5E5E5] rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#D1D1D1];
+}
+
+/* Markdown styling within prose */
+.prose {
+  @apply text-[#333];
+}
+
+.prose h1, .prose h2, .prose h3 {
+  @apply font-bold tracking-tight text-[#1A1A1A];
+}
+
+.prose p {
+  @apply mb-4;
+}
+
+.prose ul {
+  @apply list-disc list-inside mb-4;
+}
+
+.prose li {
+  @apply mb-1;
+}
